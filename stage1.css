@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-step {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.form-step-active {
+    display: block;
+}
+
+.progress-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 100px;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+}
+
+.progress-step {
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    background-color: #626262;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+
+.progress-step-active {
+    background-color: #FFBE2D;
+    color: white;
+}
+
+
+.btnnext {
+    position: absolute;
+    bottom: 7%;
+    right: 3%;
+    background-color: #ff0c8e;
+    border-radius: 10px;
+}
+
+.btnprev {
+    position: absolute;
+    bottom: 7%;
+    right: 11.5%;
+    background-color: #ff0c8e;
+    border-radius: 10px;
+}
+
+
+#shapeContainer {
+    margin-top: 2%;
+    margin-inline: auto;
+    width: 75%;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid #FFBE2D;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.table {
+    
+    width: 100%;
+    height: 50%;
+    border: 2px;
+}
+
+.shape {
+    cursor: grab;
+    width: 80px;
+    height: 100px;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+.shape img{
+    width: 100%;
+    height: 100%;
+}
+
+.drop-container {
+    position: absolute;
+    left: -35%;
+    border: 2px dashed black;
+    width: 80px;
+    height: 100px;
+    position: relative;
+    
+}
+
+.all_cont {
+    margin-top: -120px;
+    width: 100%;
+    margin-left: 9.7%;
+    height: 100px;
+    display: flex;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+}
+.table th,
+.table td {
+
+    border: 2px solid black;
+}
+#wholeNote,#wholeNote2,#wholeNote3 {
+    width: 50px;
+    height: 100px;
+    background-image: url('./assets/images/whole note.png');
+    background-size: contain;
+}
+#quarterNote,#quarterNote2,#quarterNote3 {
+    width: 50px;
+    height: 100px;
+    background-image: url('./assets/images/quarter note.png');
+    background-size: contain;
+}
+#sixteenthNote,#sixteenthNote2,#sixteenthNote {
+    width: 50px;
+    height: 100px;
+    background-image: url('./assets/images/sixtheenth note.png');
+    background-size: contain;
+}
+#eightNote,#eightNote2,#eightNote3 {
+    width: 100px;
+    height: 100px;
+    background-image: url('./assets/images/eight note.png');
+    background-size: contain;
+}
+#halfNote,#halfNote2,#halfNote3 {
+    width: 50px;
+    height: 100px;
+    background-image: url('./assets/images/half note.png');
+    background-size: contain;
+}
+#wholeRest{
+    width: 50px;
+    height: 100px;
+    background-image: url('./assets/images/whole rest.png');
+    background-size: contain;
+}
+#halfRest{
+    width: 50px;
+    height: 100px;
+    background-image: url('./assets/images/half rest.png');
+    background-size: contain;
+}
+#quarterRest{
+    width: 50px;
+    height: 100px;
+    background-image: url('./assets/images/quarter rest.png');
+    background-size: contain;
+}
+#eightRest{
+    width: 50px;
+    height: 100px;
+    background-image: url('./assets/images/eight rest.png');
+    background-size: contain;
+}
+#sixteenRest{
+    width: 50px;
+    height: 100px;
+    background-image: url('./assets/images/sixteen rest.png');
+    background-size: contain;
+}
+ .note{
+    position: absolute;
+    top: 26%;
+    left: 13%;
+    width: 60px;
+
+}
+.part{
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}

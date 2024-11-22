@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+position: relative;
+    width: 100%;
+    height: 100vh; /* Changed to 100vh to ensure it takes the full viewport height */
+    background: linear-gradient(0deg, #6c47a7, #BC93FF),
+    linear-gradient(0deg, var(--Linear, #9C59FE), var(--Linear, #9C59FE)),
+    linear-gradient(180deg, rgba(188, 158, 255, 0.2) 0%, rgba(104, 0, 255, 0.2) 68%);
+    overflow: hidden;
+    }
+.hero .animated_teacher{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+position: absolute;
+    width: 77.66%;
+height: 98.66%;
+
+transform: scaleX(-1);
+left: -13%;
+bottom: -15%;
+}
+.hero .animated_teacher img,.hero .game_name img{
+width: 100%;
+height: 100%;
+}
+.hero .game_name{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+position: absolute;
+    width: 17.58%;
+height: 12.66%;
+right: 10%;
+bottom: 5%;
+}
+.hero .input_and_btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    right: 10%;
+    top: 35%;
+    flex-direction: column;
+    gap: 20px;
+width: 40.625%;
+height: 13.05%;
+}
+.hero .input_and_btn input{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 90%;
+left: 629px;
+gap: 0px;
+border-radius: 15px;
+font-family: Poppins;
+color: #FFD217;
+font-size: 18px;
+font-weight: 500;
+line-height: 37.5px;
+letter-spacing: 0.03em;
+text-align: center;
+border:none;
+outline: none;
+}
+.hero .input_and_btn input::placeholder{
+    color: #FFD217;
+}
+.hero .input_and_btn button {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 200px;
+    line-height: 37.5px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    border: none;
+    background-color: #FF0D90;
+    font-family: Poppins;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    box-shadow: 0px 1px 5px 0px #880D0D33,
+                0px 3px 4px 0px #7B0C0C1F,
+                0px 2px 4px 0px #5B1A1A24;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out; /* Apply transition to all properties */
+    border-radius: 15px; /* Set border radius */
+}
+
+.hero .input_and_btn button:hover {
+    background-color: #A2A2A2; /* Change background color on hover */
+    box-shadow: 
+    /* Horizontal shadow, left to right */
+    5px 0px 5px rgba(0, 0, 0, 0.2),
+    10px 0px 15px rgba(0, 0, 0, 0.1),
+    15px 0px 20px rgba(0, 0, 0, 0.05),
+    /* Vertical shadow, top to bottom */
+    0px 5px 5px rgba(0, 0, 0, 0.2),
+    0px 10px 15px rgba(0, 0, 0, 0.1),
+    0px 15px 20px rgba(0, 0, 0, 0.05);
+
+}
+.settings_button {
+    width: 17.5781%;
+    height: 4.7734%;
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+}
+ a .setbtn{
+    width: 100%;
+    height: 140%;;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    outline:none;
+    cursor: pointer;
+}
+a .setbtn img{
+width: 100%;
+height: 100%;
+}
+a .setbtn:hover{
+    width: 110%;
+    height: 150%;
+    transition: all 0.5s ease-in-out;
+}

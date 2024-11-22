@@ -1,0 +1,161 @@
+.hero .center_container p{
+    font-family: Poppins;
+font-size: 25px;
+font-weight: 500;
+line-height: 37.5px;
+letter-spacing: -0.01em;
+text-align: center;
+color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Changed to 100vh to ensure it takes the full viewport height */
+    background: linear-gradient(0deg, #6c47a7, #BC93FF),
+        linear-gradient(0deg, var(--Linear, #9C59FE), var(--Linear, #9C59FE)),
+        linear-gradient(180deg, rgba(188, 158, 255, 0.2) 0%, rgba(104, 0, 255, 0.2) 68%);
+    overflow: hidden;
+}
+.hero .center_container{
+    display: flex;
+    width: 83.59%;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+gap: 5%;
+}
+
+.settings_button {
+    width: 17.5781%;
+    height: 4.7734%;
+    display: flex;
+    position: absolute;
+    gap: 20px;
+    top: 5%;
+    right: 3%;
+}
+.settings_button .setbtn {
+    width: 100%;
+    height: 140%;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.settings_button .setbtn img {
+    width: 100%;
+    height: 100%;
+}
+
+.settings_button .setbtn:hover {
+    width: 110%;
+    height: 150%;
+    transition: all 0.5s ease-in-out;
+}
+
+.levels_container{
+    width: 90%;
+    height: 35%;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+}
+.levels_container a .boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+width: 100%;
+height: 100%;
+color: white;
+border-radius: 20px;
+cursor: pointer;
+}
+.levels_container a{
+    width: 42.5%;
+height: 100%;
+text-decoration: none;
+transition: all 0.5s ease-in-out;
+}
+.levels_container a:hover{
+    width: 50%;
+    height: 110%;
+    opacity: 75%;
+}
+.box1{
+    background-color: rgb(76, 218, 254);
+    border-bottom: 10px solid rgb(8, 185, 255);
+}
+.box2{
+    background-color: rgb(134, 238, 4);
+    border-bottom: 10px solid rgb(90, 215, 3);
+}
+.box3{
+    background-color: rgb(252, 138, 255);
+    border-bottom: 10px solid rgb(218, 87, 240);
+}
+.box4{
+    background-color:rgb(255, 178, 19);
+    border-bottom: 10px solid rgb(255, 221, 23);
+}
+
+.levels_container .boxes h2{
+font-size: 250%;
+}
+.levels_container .boxes h1{
+    font-size: 300%;
+    }
+
+    .profile_container{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        top: 5%;
+        left: 3%;
+        width: 25%;
+        height: 12%;
+        z-index: 1;
+    
+    }
+    .profile_container .profile_avatar{
+        min-width: 30%;
+        height: 100%;
+    
+    }
+    .profile_container .profile_avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    }
+    .profile_container .profile_name_section{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        width: 70%;
+        height: 100%;
+        color: white;
+    }
+    .profile_container .profile_name_section h2{
+        font-size: 2ch;
+    font-weight: 900;
+    text-align: center;
+    
+    }
