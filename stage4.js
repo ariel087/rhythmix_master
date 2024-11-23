@@ -309,6 +309,7 @@ $(document).ready(function () {
             },
             success: function (response) {
                 console.log('Update successful: ');
+                window.location.href = "./stage1_result.php";
             },
             error: function (xhr, status, error) {
                 console.error(xhr.responseText);
