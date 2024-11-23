@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Validate inputs (optional)
         if ($studentId && isset($part1, $part2, $part3, $part4)) {
             // Prepare the SQL query
-            $sql = "UPDATE `stage1_level3` 
+            $sql = "UPDATE `stage1_level4` 
                     SET 
                         `PART1` = ?, 
                         `PART2` = ?, 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step-by-Step Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="stage1.css">
+    <link rel="stylesheet" href="stage2.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
             <div class="form-step form-step-active">
                 <p>Complete the rhythmic pattern by adding the notes or rest to the staff.</p>
                 <table class="table table-bordered">
-                    <img class="note" src="./assets/images/note 2-4.png" alt="">
+                    <img class="note" src="./assets/images/note 3-4.png" alt="">
 
                     <tbody>
 
@@ -56,21 +56,16 @@
                         <div class="drop-container" shapenumber="2" isFilled="false">
                             <canvas id="dropContainer2" class="drop-container-canvas" width="110" height="110"></canvas>
                         </div>
-                    </div>
-
-                    <div class="part">
-
                         <div class="drop-container" shapenumber="3" isFilled="false">
                             <canvas id="dropContainer3" class="drop-container-canvas" width="110" height="110"></canvas>
                         </div>
+                    </div>
+
+                    <div class="part">
+
                         <div class="drop-container" shapenumber="4" isFilled="false">
                             <canvas id="dropContainer4" class="drop-container-canvas" width="110" height="110"></canvas>
                         </div>
-                    </div>
-
-                    <!-- Horizontal Spacing -->
-                    <div class="part">
-
                         <div class="drop-container" shapenumber="5" isFilled="false">
                             <canvas id="dropContainer5" class="drop-container-canvas" width="110" height="110"></canvas>
                         </div>
@@ -78,6 +73,8 @@
                             <canvas id="dropContainer6" class="drop-container-canvas" width="110" height="110"></canvas>
                         </div>
                     </div>
+
+                    <!-- Horizontal Spacing -->
                     <div class="part">
 
                         <div class="drop-container" shapenumber="7" isFilled="false">
@@ -85,6 +82,21 @@
                         </div>
                         <div class="drop-container" shapenumber="8" isFilled="false">
                             <canvas id="dropContainer8" class="drop-container-canvas" width="110" height="110"></canvas>
+                        </div>
+                        <div class="drop-container" shapenumber="9" isFilled="false">
+                            <canvas id="dropContainer9" class="drop-container-canvas" width="110" height="110"></canvas>
+                        </div>
+                    </div>
+                    <div class="part">
+
+                        <div class="drop-container" shapenumber="10" isFilled="false">
+                            <canvas id="dropContainer10" class="drop-container-canvas" width="110" height="110"></canvas>
+                        </div>
+                        <div class="drop-container" shapenumber="11" isFilled="false">
+                            <canvas id="dropContainer11" class="drop-container-canvas" width="110" height="110"></canvas>
+                        </div>
+                        <div class="drop-container" shapenumber="12" isFilled="false">
+                            <canvas id="dropContainer12" class="drop-container-canvas" width="110" height="110"></canvas>
                         </div>
                     </div>
                 </div>
@@ -113,16 +125,15 @@
                     <canvas id="sixteenRest" class="shape"></canvas>
 
                 </div>
-                        <button type="button" class="btn btn-primary next-btn btnnext level1">Next</button>
-                    
+
+                <button type="button" class="btn btn-secondary prev-btn btnprev">Previous</button>
+                <button type="button" class="btn btn-primary next-btn btnnext level2">Next</button>
             </div>
-                <!-- <button type="button" class="btn btn-secondary prev-btn btnprev">Previous</button>
-                <button type="button" class="btn btn-primary next-btn btnnext">Next</button> -->
 
         </form>
         <div class="progress-indicator mt-4">
-            <div class="progress-step progress-step-active"></div>
             <div class="progress-step"></div>
+            <div class="progress-step progress-step-active"></div>
             <div class="progress-step"></div>
             <div class="progress-step"></div>
         </div>
@@ -133,8 +144,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="stage2.js"></script>
     <script src="stages.js"></script>
-    <script src="stage1.js"></script>
 </body>
 
 </html>

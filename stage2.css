@@ -19,8 +19,8 @@
     display: flex;
     justify-content: space-between;
     margin: 20px auto;
-    width: 100px;
     gap: 5px;
+    width: 100px;
     position: absolute;
     bottom: 5%;
     left: 3%;
@@ -100,7 +100,7 @@
     position: absolute;
     left: -35%;
     border: 2px dashed black;
-    width: 80px;
+    width: 60px;
     height: 100px;
     position: relative;
     

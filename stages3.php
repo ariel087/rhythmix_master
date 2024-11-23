@@ -5,7 +5,7 @@ if (isset($_SESSION['user_lrn'])) {
     $userLrn = $_SESSION['user_lrn'];
 
     // Check if the LRN exists in the database
-    $sqlCheck = "SELECT COUNT(*) AS count FROM `stage1_level1` WHERE `LRN` = ?";
+    $sqlCheck = "SELECT COUNT(*) AS count FROM `stage1_level4` WHERE `LRN` = ?";
     $stmtCheck = $connection->prepare($sqlCheck);
     $stmtCheck->bind_param("s", $userLrn);
     $stmtCheck->execute();
@@ -14,7 +14,7 @@ if (isset($_SESSION['user_lrn'])) {
 
     if ($row['count'] == 0) {
         // If the LRN does not exist, insert a new record
-        $sqlInsert = "INSERT INTO `stage1_level1` (`LRN`, `PART1`, `PART2`, `PART3`, `PART4`) VALUES (?, 0, 0, 0, 0)";
+        $sqlInsert = "INSERT INTO `stage1_level4` (`LRN`, `PART1`, `PART2`, `PART3`, `PART4`) VALUES (?, 0, 0, 0, 0)";
         $stmtInsert = $connection->prepare($sqlInsert);
         $stmtInsert->bind_param("s", $userLrn);
 
@@ -52,11 +52,11 @@ if (isset($_SESSION['user_lrn'])) {
 <body>
     <div class="hero">
         <div class="stage_title">
-            <h2>STAGE 1 - LEVEL 1</h2>
+            <h2>STAGE 1 - LEVEL 4</h2>
         </div>
         <div class="stage_container">
         <?php
-        include ("./stage1.php");
+        include ("./stage4.php");
         ?>
         </div>
         </div>

@@ -16,9 +16,12 @@ $(document).ready(function() {
             dataType: 'json', // Expected data type of the response
             success: function(data) {
                 // Handle the response data here
-                console.log(data);
-                alert('Success: ' + data.message);
-            },
+                console.log(data.status);
+                alert(data.message);
+                if(data.status === "success"){
+                    window.location.href = "../rhythmix_master/levels.php"
+
+                }            },
             error: function(jqXHR, textStatus, errorThrown) {
                 // Handle any errors here
                 console.error('Error:', textStatus, errorThrown);

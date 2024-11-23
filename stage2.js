@@ -1,5 +1,9 @@
 const user_lrn = document.querySelector('#userlrn')
-
+const level2 = document.querySelector(".level2");
+const btnprev = document.querySelector('.btnprev')
+btnprev.addEventListener('click', () => {
+    window.location.href = "./stages.php";
+});
 let totalNoteValue1 = 0;  // Total value for dropContainer1
 let totalNoteValue2 = 0;  // Total value for dropContainer2
 let totalNoteValue3 = 0;  // Total value for dropContainer3
@@ -8,21 +12,11 @@ let totalNoteValue5 = 0;  // Total value for dropContainer5
 let totalNoteValue6 = 0;  // Total value for dropContainer6
 let totalNoteValue7 = 0;  // Total value for dropContainer6
 let totalNoteValue8 = 0;  // Total value for dropContainer6
+let totalNoteValue9 = 0;  // Total value for dropContainer6
+let totalNoteValue10 = 0;  // Total value for dropContainer6
+let totalNoteValue11 = 0;  // Total value for dropContainer6
+let totalNoteValue12 = 0;  // Total value for dropContainer6
 
-const steps = document.querySelectorAll(".form-step");
-const nextButtons = document.querySelectorAll(".next-btn");
-const prevButtons = document.querySelectorAll(".prev-btn");
-const progressSteps = document.querySelectorAll(".progress-step");
-const level1 = document.querySelector(".level1");
-let part1 = 0;
-let part2 = 0;
-let part3 = 0;
-let part4 = 0;
-
-let part1Score = 0;
-let part2Score = 0;
-let part3Score = 0;
-let part4Score = 0;
 // Define noteValues globally so it's accessible within the handleDrop function
 let noteValues = {
     wholeNote: 4,
@@ -36,7 +30,15 @@ let noteValues = {
     eightRest: 0.5,
     sixteenRest: 0.25,
 };
+let part1 = 0;
+let part2 = 0;
+let part3 = 0;
+let part4 = 0;
 
+let part1Score = 0;
+let part2Score = 0;
+let part3Score = 0;
+let part4Score = 0;
 // Initialize isShapeInContainer to track the state of each shape
 let isShapeInContainer = {
     '1': false,
@@ -46,7 +48,11 @@ let isShapeInContainer = {
     '5': false,
     '6': false,
     '7': false,
-    '8': false
+    '8': false,
+    '9': false,
+    '10': false,
+    '11': false,
+    '12': false
 };
 let draggedShape = null;
 let offsetX, offsetY;
@@ -162,6 +168,18 @@ $(document).ready(function () {
                         case '8':
                             totalNoteValue8 = draggedShapeNoteValue;
                             break;
+                        case '9':
+                            totalNoteValue9 = draggedShapeNoteValue;
+                            break;
+                        case '10':
+                            totalNoteValue10 = draggedShapeNoteValue;
+                            break;
+                        case '11':
+                            totalNoteValue11 = draggedShapeNoteValue;
+                            break;
+                        case '12':
+                            totalNoteValue12 = draggedShapeNoteValue;
+                            break;
                     }
     
                     // Mark the dragged shape's container in the shape's data
@@ -199,28 +217,39 @@ $(document).ready(function () {
                         case '8':
                             totalNoteValue8 = 0;  // Reset total for container 6
                             break;
+                        case '9':
+                            totalNoteValue9 = 0;  // Reset total for container 6
+                            break;
+                        case '10':
+                            totalNoteValue10 = 0;  // Reset total for container 6
+                            break;
+                        case '11':
+                            totalNoteValue11 = 0;  // Reset total for container 6
+                            break;
+                        case '12':
+                            totalNoteValue12 = 0;  // Reset total for container 6
+                            break;
                     }
                 }
             }
             
             // Log the updated totals for each container
-             part1 = totalNoteValue1 + totalNoteValue2;
-             part2 = totalNoteValue3 + totalNoteValue4;
-             part3 = totalNoteValue5 + totalNoteValue6;
-             part4 = totalNoteValue7 + totalNoteValue8;
+             part1 = totalNoteValue1 + totalNoteValue2 + totalNoteValue3;
+             part2 = totalNoteValue4 + totalNoteValue5 + totalNoteValue6;
+             part3 = totalNoteValue7 + totalNoteValue8 + totalNoteValue9;
+             part4 = totalNoteValue10 + totalNoteValue11 + totalNoteValue12;
 
-            console.log(`Total for container 1 and 2: ${part1}`);
-            console.log(`Total for container 3 and 4: ${part2}`);
-            console.log(`Total for container 5 and 6: ${part3}`);
-            console.log(`Total for container 7 and 8: ${part4}`);
-           if(part1 === 2){part1Score = 1}
-           if(part2 === 2){part2Score = 1}
-           if(part3 === 2){part3Score = 1}
-           if(part4 === 2){part4Score = 1}
+            console.log(`Total for container 1 2 and 3: ${part1}`);
+            console.log(`Total for container 4 5 and 6: ${part2}`);
+            console.log(`Total for container 7 8 and 9: ${part3}`);
+            console.log(`Total for container 10 11 and 12: ${part4}`);
+            if(part1 === 3){part1Score = 1}
+           if(part2 === 3){part2Score = 1}
+           if(part3 === 3){part3Score = 1}
+           if(part4 === 3){part4Score = 1}
         }
     }
-
-    level1.addEventListener('click', () => {
+    level2.addEventListener('click', () => {
         if (part1 === 0 || part2 === 0 || part3 === 0 || part4 === 0) {
             alert('Please put the note or rest')
         }
@@ -238,7 +267,7 @@ $(document).ready(function () {
             score4:part4Score
         }]
         $.ajax({
-            url: './ajax.levelScore.php',
+            url: './ajax.levelScore2.php',
             method: 'POST',
             data: {
                 STUDENT_ID: user_lrn.value,
@@ -246,49 +275,12 @@ $(document).ready(function () {
             },
             success: function (response) {
                 console.log('Update successful: ');
-                window.location.href = "./stages1.php";
+                window.location.href = "./stages2.php";
             },
             error: function (xhr, status, error) {
                 console.error(xhr.responseText);
             }
         });
     }
-    function updateDatabase1(studentScore2) {
-        $.ajax({
-            url: './ajax.levelScore2.php',
-            method: 'POST',
-            data: {
-                STUDENT_ID: '123456',
-                LEVEL_TWO_SCORE: studentScore2
-            },
-            success: function (response) {
-                console.log('Update successful2: ' + totalNoteValue2);
-            },
-            error: function (xhr, status, error) {
-                console.error(xhr.responseText);
-            }
-        });
-
-    }
-
-    function updateDatabase2(studentScore3) {
-        $.ajax({
-            url: './ajax.levelScore3.php',
-            method: 'POST',
-            data: {
-                STUDENT_ID: '123456',
-                LEVEL_THREE_SCORE: studentScore3
-            },
-            success: function (response) {
-                console.log('Update successful3: ' + totalNoteValue3);
-            },
-            error: function (xhr, status, error) {
-                console.error(xhr.responseText);
-            }
-        });
-
-    }
-
-
 
 });
